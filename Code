@@ -162,13 +162,13 @@ def document_loader():
     textChunk = CharacterTextSplitter(chunk_size=200)
     texts = textChunk.split_documents(document)
     len(texts)
-    myopenkey  = "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"
+    myopenkey  = "Enter your key"
     from langchain.embeddings import OpenAIEmbeddings
     myembedmodel = OpenAIEmbeddings(openai_api_key=myopenkey)
     from langchain.vectorstores import Pinecone
     import pinecone
     pinecone.init(
-            api_key="c9afbc99-bf1c-4ae2-a4dd-0db419585a0f",
+            api_key="nter your key",
             environment="asia-southeast1-gcp-free"
     )
     docsearch=Pinecone.from_documents(
@@ -327,7 +327,7 @@ def videoDownload():
         list_box.delete(0, 'end')
 
         # Create API Object
-        api = Api(api_key='AIzaSyDSn9HX5SHGsiyNl_bFDtP1cHaSaI1h1h4')
+        api = Api(api_key='Enter your key')
 
         if "youtube" in playlistId.get():
             playlist_id = playlistId.get()[len(
@@ -476,7 +476,7 @@ def pomodoro():
     root.mainloop()
 def lanchain_dalle():
     inp = input("Enter your prompt : ")
-    key= "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"
+    key= "Enter your key"
     myllm = OpenAI(
     model = 'text-davinci-003',
     temperature=1,
